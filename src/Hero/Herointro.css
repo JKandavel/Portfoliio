@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Fullscreen hero */
+.hero-container {
+  position: relative;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  z-index: 0;
+  background: black;
+}
+
+/* Background image */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 36px 36px;
+}
+
+/* Dark overlay for readability */
+.hero-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.15) 40%,
+    rgba(0,0,0,0.65) 100%
+  );
+  z-index: 1;
+}
+
+/* Header icons */
+.back-arrow,
+.three-dot {
+  position: absolute;
+  top: 18px;
+  z-index: 10;
+}
+
+.back-arrow {
+  left: 16px;
+  font-size: 28px;
+  color: white;
+}
+
+.three-dot {
+  right: 16px;
+  width: 22px;
+}
+
+/* Centered content */
+.hero-content {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+  width: 90%;
+}
+
+/* Title */
+.h-big {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.ii-small {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.user-name {
+  font-size: 24px;
+  color: #ffd86b;
+  font-weight: 600;
+}
+
+/* Identity line */
+.identity {
+  margin-top: 8px;
+}
+
+.this-is {
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+.jk-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffd86b;
+}
+
+/* Role */
+.role-text {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 200px;
+  height: 56px;
+  margin: 22px auto 0;
+  touch-action: pan-x;
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  transform: translateY(-50%);
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.icon.center {
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  opacity: 1;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+}
+
+.icon.left {
+  left: 18%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0.5;
+}
+
+.icon.right {
+  left: 82%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0.5;
+}
+
+.icon.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+}
