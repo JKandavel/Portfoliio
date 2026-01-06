@@ -3,7 +3,7 @@
 /* Section background */
 .about-overlay {
   width: 100vw;
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background: radial-gradient(circle at top, #0f0f14 0%, #060608 70%);
   color: white;
   font-family: "Inter", system-ui, sans-serif;

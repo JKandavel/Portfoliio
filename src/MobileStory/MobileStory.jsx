@@ -56,6 +56,9 @@ export default function MobileStory() {
       }
     };
 
+    const isTouch = typeof window !== "undefined" && "ontouchstart" in window;
+    if (isTouch) return; // don't attach wheel handlers on touch devices
+
     window.addEventListener("wheel", onWheel, { passive: false });
     return () => window.removeEventListener("wheel", onWheel);
   }, [showAbout, showVision]);

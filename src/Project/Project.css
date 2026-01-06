@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 .projects-page {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background: radial-gradient(circle at top, #101014 0%, #050507 70%);
   padding: 80px 24px 120px;
   font-family: "Inter", system-ui, sans-serif;

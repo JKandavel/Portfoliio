@@ -11,7 +11,7 @@
   bottom: -120vh;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: #000;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -34,7 +34,7 @@
   top: 0;
   right: -100vw;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 
   background: radial-gradient(circle at top, #0a0a0d 0%, #000 70%);
   transition: right 0.9s cubic-bezier(.2,.8,.2,1);
@@ -51,7 +51,7 @@
 
 
 .vision-flow {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
  background: transparent;
   overflow-y: auto;
@@ -68,4 +68,31 @@
 /* Slide in */
 .vision-panel.show {
   right: 0;
+}
+
+/* Responsive: allow normal page scrolling on small / touch devices */
+@media (max-width: 768px) {
+  .story-layer {
+    position: static;
+    inset: auto;
+    z-index: auto;
+    pointer-events: none;
+  }
+
+  .about-scroll,
+  .vision-panel,
+  .vision-flow {
+    position: static;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    -webkit-overflow-scrolling: auto;
+    transition: none;
+    pointer-events: auto;
+  }
 }

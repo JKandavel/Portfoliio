@@ -8,8 +8,11 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;   /* IMPORTANT */
+  -webkit-overflow-scrolling: touch;  /* iOS smooth scroll */
 }
+
 
 #root {
   height: 100%;

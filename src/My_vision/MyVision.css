@@ -3,7 +3,7 @@
 
 /* Page */
 .vision-page {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background: radial-gradient(circle at top, #0a0a0d 0%, #000 70%);
   color: white;
   padding: 80px 24px 140px;
